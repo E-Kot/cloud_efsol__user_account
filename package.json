@@ -29,5 +29,8 @@
     "gulp-webpcss": "^1.1.1",
     "sass": "latest",
     "webp-converter": "2.2.3"
+  },
+  "dependencies": {
+    "uikit": "^3.6.22"
   }
 }
