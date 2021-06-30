@@ -235,6 +235,7 @@ h6,.h6 {
 }
 
 .site-header {
+  position: relative;
   padding-top: 1em;
   padding-bottom: 1.5em;
   @media (min-width: 960px) {
@@ -303,8 +304,15 @@ h6,.h6 {
   .logo__img {
     height: 4em;
     width: auto;
+    @media (min-width: 640px) {
+      margin-left: 3.3em;
+      height: 3.5em;
+    }
     @media (min-width: 768px) {
       height: 3em;
+    }
+    @media (min-width: 960px) {
+      margin-left: 0;
     }
   }
 }
@@ -313,6 +321,18 @@ h6,.h6 {
     text-align: left;
     white-space: nowrap;
   }
+}
+
+.mobile-nav_toggle {
+  position: absolute;
+  top: 0.7em;
+  left: 1em;
+  width: 2em;
+  height: 2em;
+}
+.site-content {
+  height: 100%;
+  position: relative;
 }
 
 .footer {

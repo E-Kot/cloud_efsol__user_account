@@ -2553,7 +2553,7 @@ select.uk-form-width-xsmall {
           box-sizing: border-box;
   width: 270px;
   padding: 24px 24px;
-  background: #0F0F0F;
+  background: #575965;
   /* 3 */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -8808,6 +8808,7 @@ h6,
 }
 
 .site-header {
+  position: relative;
   padding-top: 1em;
   padding-bottom: 1.5em;
 }
@@ -8836,6 +8837,19 @@ h6,
 .uk-breadcrumb li {
   text-align: left;
   white-space: nowrap;
+}
+
+.mobile-nav_toggle {
+  position: absolute;
+  top: 0.7em;
+  left: 1em;
+  width: 2em;
+  height: 2em;
+}
+
+.site-content {
+  height: 100%;
+  position: relative;
 }
 
 .footer {
@@ -9120,6 +9134,11 @@ h6,
 
   .site-header .site-header__grid .dropdown-block .dropdown-block__button {
     padding: 0.5em 1.75em;
+  }
+
+  .logo .logo__img {
+    margin-left: 3.3em;
+    height: 3.5em;
   }
 
   .footer {
@@ -9511,6 +9530,10 @@ h6,
 
   .site-header .site-header__grid > div:last-of-type {
     margin-top: 0;
+  }
+
+  .logo .logo__img {
+    margin-left: 0;
   }
 
   .footer .footer__column {
