@@ -221,8 +221,14 @@ h6,.h6 {
   padding-top: 1em;
   padding-bottom: 1.5em;
   @media (min-width: 960px) {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
   }
   .site-header__grid {
     text-align: center;
