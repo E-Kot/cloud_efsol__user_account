@@ -1,21 +1,297 @@
-/* Sample
-Write your code.
-*/
+/* ========================================================================
+   Theme Style:
+ ========================================================================== */
 
-body {
-  font-size: 30px;
+$efsol-theme-h1-font-size:                              2.5rem;   // 40px
+$efsol-theme-h1-font-size-s:                            2.125em;  // 34px
+$efsol-theme-h2-font-size:                              2rem;     // 32px
+$efsol-theme-h2-font-size-s:                            1.875em;  // 30px
+$efsol-theme-h3-font-size:                              1.75rem;  // 28px
+$efsol-theme-h3-font-size-s:                            1.625em;  // 26px
+$efsol-theme-h4-font-size:                              1.5rem;   // 24px
+$efsol-theme-h4-font-size-s:                            1.375em;  // 22px
+$efsol-theme-h5-font-size:                              1.25rem;  // 20px
+$efsol-theme-h6-font-size:                              1.125rem; // 18px
+
+$efsol-theme-link-hover:                                #656c92;
+
+$bg_yellow:                                              #FFD200;
+
+/* --------- mixins --------- */
+@mixin btn($font-weight: 500, $color: $global-color, $justify-content: center) {
+  font-weight: $font-weight;
+  color: $color;
+  justify-content: $justify-content;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+h1,.h1 {
+  font-size: $efsol-theme-h1-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h1-font-size;
+  }
+}
+h2,.h2 {
+  font-size: $efsol-theme-h2-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h2-font-size;
+  }
+}
+h3,.h3 {
+  font-size: $efsol-theme-h3-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h3-font-size;
+  }
+}
+h4,.h4 {
+  font-size: $efsol-theme-h4-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h4-font-size;
+  }
+}
+h5,.h5 {
+  font-size: $efsol-theme-h5-font-size;
+}
+h6,.h6 {
+  font-size: $efsol-theme-h6-font-size;
 }
 
-span {
-  font-size: 16px;
-  @media (min-width: 1200px) {
-    font-size: 20px;
+._bg_yellow {
+  background-color: $bg_yellow;
+}
+
+
+.button {
+  @include btn;
+  border: none;
+  font-family: $global-font-family;
+  border-radius: 0;
+  font-size: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+
+  &.button_small {
+    padding: 0.75em 1.75em;
+  }
+  &.button_large {
+    padding: 0.75em 3em;
+    font-weight: 600;
+    height: 3.5em;
+  }
+  &.button_add:before {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: url("../img_sprite/icons/icons.svg#add") no-repeat center center;
+    background-size: 150%;
+    margin-right: 1em;
+  }
+}
+.animated-button {
+  position: relative;
+  height: 2.5em;
+  overflow: hidden;
+  .animated-button__btn {
+    background: $bg_yellow;
+    line-height: 1.05;
+    overflow: hidden;
+    border: none;
+    .button_add {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 1em;
+        height: 1em;
+        background: url("../img_sprite/icons/icons.svg#add") no-repeat center center;
+        margin-right: 1em;
+      }
+    }
+    &:focus{
+      outline: 0;
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      width: 5em;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: .5;
+      filter: blur(30px);
+      transform: translateX(-100px)  skewX(-15deg);
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.6);
+      width: 2.5em;
+      height: 100%;
+      left: 1.875em;
+      top: 0;
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100px) skewX(-15deg);
+    }
+    &:hover{
+      cursor: pointer;
+      &:before{
+        transform: translateX(400px)  skewX(-15deg);
+        opacity: 0.6;
+        transition: 1s;
+      }
+      &:after{
+        transform: translateX(400px) skewX(-15deg);
+        opacity: 1;
+        transition: 1s;
+      }
+    }
+    &:active {
+      background: #ffb90b;
+    }
+    &:visited {
+      background: $bg_yellow;
+    }
   }
 }
 
-div {
-  font-size: 26px;
-  @media (min-width: 1200px) {
-    font-size: 30px;
+.button_login-info {
+  @include btn($font-weight: 400);
+  &:before {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url("../img_sprite/icons/icons.svg#user") no-repeat center center;
+    margin-right: 1em;
+  }
+  .uk-text-truncate {
+    max-width: calc(100% - 40px);
   }
 }
+
+.dropdown-block {
+  position: relative;
+  height: 100%;
+  max-width: 22em;
+  margin: 0 auto;
+  .button {
+    width: 100%;
+  }
+  .dropdown-block__content {
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    padding-top: 1em;
+    text-align: left;
+    box-shadow: $global-medium-box-shadow;
+    li {
+      &.uk-nav-header {
+        font-weight: 600;
+        color: $global-link-color;
+      }
+      a {
+        color: $global-link-color;
+        &:hover,
+        &:active {
+          color: $efsol-theme-link-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.site-header {
+  padding-top: 1em;
+  padding-bottom: 1.5em;
+  @media (min-width: 960px) {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  .site-header__grid {
+    text-align: center;
+    @media (min-width: 960px) {
+      & {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: center;
+      }
+      &>div:last-of-type {
+        margin-top: 0;
+      }
+    }
+    .animated-button {
+      margin-top: 24px;
+      @media (min-width: 640px) {
+        & {
+          margin: 0;
+          max-width: 12em;
+        }
+      }
+      .animated-button__btn {
+        margin: 0 auto;
+        @media (min-width: 640px) {
+          & {
+            margin: 0;
+          }
+        }
+      }
+    }
+    @media (min-width: 640px) {
+      .uk-first-column {
+        text-align: left;
+      }
+      .uk-breadcrumb {
+        text-align: right;
+      }
+      .dropdown-block {
+        margin: 0;
+        max-width: 27em;
+        float: right;
+        .dropdown-block__button {
+          padding: 0.5em 1.75em;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  display: inline-block;
+  .logo__img {
+    height: 4em;
+    width: auto;
+    @media (min-width: 768px) {
+      height: 3em;
+    }
+  }
+}
+.uk-breadcrumb {
+  li {
+    text-align: left;
+    white-space: nowrap;
+  }
+}
+
+
+
+

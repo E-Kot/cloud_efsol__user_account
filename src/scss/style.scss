@@ -14,6 +14,43 @@ Do not delete!
 @import "fonts";
 /* Connecting fonts End */
 
+// Custom variables and variable overwrites.
+$global-font-family:                            'Montserrat', sans-serif;
+$global-font-size:                               16px;
+$global-color:                                   #0F0F0F;
+$global-muted-color:                             #575965;
+$global-link-color:                              #0F0F0F;
+$global-muted-background:                        #F3F3F9;
+$global-primary-background:                      #575965;
+$global-secondary-background:                    #0F0F0F;
+
+$global-success-background:                      #45e7c9;
+$global-warning-background:                      #fcc175;
+$global-danger-background:                       #fa5a78;
+
+$global-border-width:                            2px;
+$global-border:                                  #F3F3F9;
+
+$global-medium-box-shadow:                       0px 5px 16px 0px #747EB212;
+
+$global-margin:                                  24px;
+$global-small-margin:                            1rem;
+$global-medium-margin:                           32px;
+$global-large-margin:                            40px;
+$global-xlarge-margin:                           48px;
+
+$global-gutter:                                  16px;
+$global-small-gutter:                            8px;
+$global-medium-gutter:                           32px;
+$global-large-gutter:                            48px;
+
+$container-padding-horizontal:                   16px;
+
+$nav-header-text-transform:                      none;
+$nav-header-font-size:                           $global-font-size;
+
+
+
 // Import UIkit default variables and available mixins.
 @import "../../node_modules/uikit/src/scss/variables";
 @import "../../node_modules/uikit/src/scss/mixins";
@@ -81,12 +118,12 @@ Do not delete!
 @import "../../node_modules/uikit/src/scss/components/grid.scss";
 //
 //// Navs
-//@import "../../node_modules/uikit/src/scss/components/nav.scss";
+@import "../../node_modules/uikit/src/scss/components/nav.scss";
 //@import "../../node_modules/uikit/src/scss/components/navbar.scss"; // After: Card, Grid, Nav, Icon, Search
 //@import "../../node_modules/uikit/src/scss/components/subnav.scss";
 @import "../../node_modules/uikit/src/scss/components/breadcrumb.scss";
 //@import "../../node_modules/uikit/src/scss/components/pagination.scss";
-@import "../../node_modules/uikit/src/scss/components/tab.scss";
+//@import "../../node_modules/uikit/src/scss/components/tab.scss";
 //@import "../../node_modules/uikit/src/scss/components/slidenav.scss"; // After: Icon
 //@import "../../node_modules/uikit/src/scss/components/dotnav.scss";
 //@import "../../node_modules/uikit/src/scss/components/thumbnav.scss";
@@ -98,10 +135,10 @@ Do not delete!
 @import "../../node_modules/uikit/src/scss/components/animation.scss";
 @import "../../node_modules/uikit/src/scss/components/width.scss";
 @import "../../node_modules/uikit/src/scss/components/height.scss";
-//@import "../../node_modules/uikit/src/scss/components/text.scss";
+@import "../../node_modules/uikit/src/scss/components/text.scss";
 //@import "../../node_modules/uikit/src/scss/components/column.scss";
 @import "../../node_modules/uikit/src/scss/components/cover.scss";
-//@import "../../node_modules/uikit/src/scss/components/background.scss";
+@import "../../node_modules/uikit/src/scss/components/background.scss";
 //@import "../../node_modules/uikit/src/scss/components/align.scss";
 @import "../../node_modules/uikit/src/scss/components/svg.scss";
 @import "../../node_modules/uikit/src/scss/components/utility.scss";
