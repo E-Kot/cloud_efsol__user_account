@@ -216,6 +216,23 @@ h6,.h6 {
     }
   }
 }
+.site-body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  min-height: 100vh;
+}
+.main {
+  box-sizing: border-box;
+  width: 100%;
+  @media (min-width: 960px) {
+    padding-top: 64px;
+  }
+}
 
 .site-header {
   padding-top: 1em;
@@ -295,6 +312,43 @@ h6,.h6 {
   li {
     text-align: left;
     white-space: nowrap;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  @media (min-width: 640px) {
+    & {
+      text-align: right;
+      .uk-first-column {
+        text-align: left;
+      }
+    }
+  }
+  @media (min-width: 960px) {
+    .footer__column {
+      text-align: left;
+    }
+    .logo {
+      margin-right: 2em;
+    }
+  }
+  @media (min-width: 1200px) {
+    .footer__column {
+      text-align: center;
+      max-width: max-content;
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+    .logo {
+      margin-right: 0;
+    }
+  }
+  .logo__img {
+    height: 32px;
   }
 }
 
