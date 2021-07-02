@@ -1,0 +1,33 @@
+
+.dropdown-block {
+  position: relative;
+  height: 100%;
+  max-width: 22em;
+  margin: 0 auto;
+  .button {
+    width: 100%;
+  }
+  .dropdown-block__content {
+    width: 100%;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+    padding-top: 1em;
+    text-align: left;
+    box-shadow: $global-medium-box-shadow;
+    li {
+      &.uk-nav-header {
+        font-weight: 600;
+        color: $global-link-color;
+      }
+      a {
+        color: $global-link-color;
+        &:hover,
+        &:active {
+          color: $efsol-theme-link-hover;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

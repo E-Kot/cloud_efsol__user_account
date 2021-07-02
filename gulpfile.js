@@ -10,6 +10,7 @@ let path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         img_sprite: project_folder + "/img_sprite/",
+        img_svg: project_folder + "/img/img_svg/",
         fonts: project_folder + "/fonts/",
         favicon: project_folder + "/favicon/",
     },
@@ -17,7 +18,8 @@ let path = {
         html: [sourse_folder + "/*.html", "!" + sourse_folder + "/_*.html"],
         css: sourse_folder + "/scss/style.scss",
         js: sourse_folder + "/js/script.js",
-        img: sourse_folder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
+        img: sourse_folder + "/img/**/*.{jpg,jpeg,png,gif,ico,webp}",
+        img_svg: sourse_folder + "/img/*.svg",
         fonts: sourse_folder + "/fonts/*.ttf",
         favicon: sourse_folder + "/favicon/*",
     },
@@ -25,7 +27,8 @@ let path = {
         html: sourse_folder + "/**/*.html",
         css: sourse_folder + "/scss/**/*.scss",
         js: sourse_folder + "/js/**/*.js",
-        img: sourse_folder + "/img/**/*.{jpg,jpeg,png,svg,gif,ico,webp}",
+        img: sourse_folder + "/img/**/*.{jpg,jpeg,png,gif,ico,webp}",
+        img_svg: sourse_folder + "/img/*.svg",
         favicon: sourse_folder + "/favicon/*",
     },
     clean: "./" + project_folder + "/"
@@ -136,6 +139,16 @@ function images() {
         .pipe(dest(path.build.img))
         .pipe(browsersync.stream())
 }
+function imgSvg() {
+    return  src(path.src.img_svg)
+        .pipe(
+            imagemin({
+                svgoPlugins: [{ removeViewBox: false }],
+            })
+        )
+        .pipe(dest(path.build.img_svg))
+        .pipe(browsersync.stream())
+}
 function fonts() {
     src(path.src.fonts)
         .pipe(ttf2woff())
@@ -199,7 +212,8 @@ function watchFiles() {
     gulp.watch([path.watch.css], css);
     gulp.watch([path.watch.js], js);
     gulp.watch([path.watch.img], images);
-    gulp.watch([path.watch.img], favicon);
+    gulp.watch([path.watch.img_svg], imgSvg);
+    gulp.watch([path.watch.favicon], favicon);
 }
 
 function clean() {
@@ -207,9 +221,10 @@ function clean() {
     return del(['dist/**/*', '!dist/img_sprite']);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, favicon), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, imgSvg, fonts, favicon), fontsStyle);
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+exports.imgSvg = imgSvg;
 exports.favicon = favicon;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;

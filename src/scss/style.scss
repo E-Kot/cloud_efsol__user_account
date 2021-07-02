@@ -35,7 +35,7 @@ $global-border:                                  #F3F3F9;
 $global-medium-box-shadow:                       0px 5px 16px 0px #747EB212;
 
 $global-margin:                                  24px;
-$global-small-margin:                            1rem;
+$global-small-margin:                            16px;
 $global-medium-margin:                           32px;
 $global-large-margin:                            40px;
 $global-xlarge-margin:                           48px;
@@ -154,7 +154,15 @@ $nav-header-font-size:                           $global-font-size;
 
 
 // Theme Style
-@import "site_style";
+@import "components/theme-variables";
+@import "components/basic-style";
+@import "components/basic-layout";
+@import "components/buttons";
+@import "components/dropdown-block";
+@import "components/site-header";
+@import "components/menu";
+@import "components/site-footer";
+@import "custom_style";
 
 //// Need to be loaded last
 @import "../../node_modules/uikit/src/scss/components/print.scss";

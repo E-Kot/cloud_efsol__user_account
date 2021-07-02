@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  padding: 1em 0;
+  text-align: center;
+  @media (min-width: 640px) {
+    & {
+      text-align: right;
+      .uk-first-column {
+        text-align: left;
+      }
+    }
+  }
+  @media (min-width: 960px) {
+    & {
+      grid-area: footer;
+    }
+    .footer__column {
+      text-align: left;
+    }
+    .logo {
+      margin-right: 2em;
+    }
+  }
+  @media (min-width: 1200px) {
+    .footer__column {
+      text-align: center;
+      max-width: max-content;
+      &:last-of-type {
+        text-align: right;
+      }
+    }
+    .logo {
+      margin-right: 0;
+    }
+  }
+  .logo__img {
+    height: 32px;
+    @media (min-width: 768px) {
+      height: 32px;
+    }
+  }
+}

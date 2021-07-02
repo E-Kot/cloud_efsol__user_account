@@ -1,0 +1,26 @@
+/* ========================================================================
+   Theme Style:
+ ========================================================================== */
+
+$efsol-theme-h1-font-size:                              2.5rem;   // 40px
+$efsol-theme-h1-font-size-s:                            2.125em;  // 34px
+$efsol-theme-h2-font-size:                              2rem;     // 32px
+$efsol-theme-h2-font-size-s:                            1.875em;  // 30px
+$efsol-theme-h3-font-size:                              1.75rem;  // 28px
+$efsol-theme-h3-font-size-s:                            1.625em;  // 26px
+$efsol-theme-h4-font-size:                              1.5rem;   // 24px
+$efsol-theme-h4-font-size-s:                            1.375em;  // 22px
+$efsol-theme-h5-font-size:                              1.25rem;  // 20px
+$efsol-theme-h6-font-size:                              1.125rem; // 18px
+
+$efsol-theme-link-hover:                                #656c92;
+
+$bg_yellow:                                              #FFD200;
+$bg_white:                                               #FFFFFF;
+
+/* --------- mixins --------- */
+@mixin btn($font-weight: 500, $color: $global-color, $justify-content: center) {
+  font-weight: $font-weight;
+  color: $color;
+  justify-content: $justify-content;
+}

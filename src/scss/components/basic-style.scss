@@ -1,0 +1,41 @@
+body {
+  background-color: $bg_white;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+}
+h1,.h1 {
+  font-size: $efsol-theme-h1-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h1-font-size;
+  }
+}
+h2,.h2 {
+  font-size: $efsol-theme-h2-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h2-font-size;
+  }
+}
+h3,.h3 {
+  font-size: $efsol-theme-h3-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h3-font-size;
+  }
+}
+h4,.h4 {
+  font-size: $efsol-theme-h4-font-size-s;
+  @media (min-width: 960px) {
+    font-size: $efsol-theme-h4-font-size;
+  }
+}
+h5,.h5 {
+  font-size: $efsol-theme-h5-font-size;
+}
+h6,.h6 {
+  font-size: $efsol-theme-h6-font-size;
+}
+
+._bg_yellow {
+  background-color: $bg_yellow;
+}

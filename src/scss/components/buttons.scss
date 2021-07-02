@@ -1,0 +1,122 @@
+.button {
+  @include btn;
+  border: none;
+  font-family: $global-font-family;
+  border-radius: 0;
+  font-size: inherit;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  align-items: center;
+
+  &.button_small {
+    padding: 0.75em 1.75em;
+  }
+  &.button_large {
+    padding: 0.75em 3em;
+    font-weight: 600;
+    height: 3.5em;
+  }
+  &.button_add:before {
+    content: "";
+    display: block;
+    width: 1em;
+    height: 1em;
+    background: url("../img_sprite/icons/icons.svg#add") no-repeat center center;
+    background-size: 150%;
+    margin-right: 1em;
+  }
+}
+
+.animated-button {
+  position: relative;
+  height: 2.5em;
+  overflow: hidden;
+  .animated-button__btn {
+    background: $bg_yellow;
+    line-height: 1.05;
+    overflow: hidden;
+    border: none;
+    .button_add {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-content: stretch;
+      align-items: center;
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: 1em;
+        height: 1em;
+        background: url("../img_sprite/icons/icons.svg#add") no-repeat center center;
+        margin-right: 1em;
+      }
+    }
+    &:focus{
+      outline: 0;
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255, 255, 255, 0.8);
+      width: 5em;
+      height: 100%;
+      left: 0;
+      top: 0;
+      opacity: .5;
+      filter: blur(30px);
+      transform: translateX(-100px)  skewX(-15deg);
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      background: rgba(255,255,255,0.6);
+      width: 2.5em;
+      height: 100%;
+      left: 1.875em;
+      top: 0;
+      opacity: 0;
+      filter: blur(5px);
+      transform: translateX(-100px) skewX(-15deg);
+    }
+    &:hover{
+      cursor: pointer;
+      &:before{
+        transform: translateX(400px)  skewX(-15deg);
+        opacity: 0.6;
+        transition: 1s;
+      }
+      &:after{
+        transform: translateX(400px) skewX(-15deg);
+        opacity: 1;
+        transition: 1s;
+      }
+    }
+    &:active {
+      background: #ffb90b;
+    }
+    &:visited {
+      background: $bg_yellow;
+    }
+  }
+}
+
+.button_login-info {
+  @include btn($font-weight: 400);
+  &:before {
+    content: "";
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background: url("../img_sprite/icons/icons.svg#user") no-repeat center center;
+    margin-right: 1em;
+  }
+  .uk-text-truncate {
+    max-width: calc(100% - 40px);
+  }
+}
