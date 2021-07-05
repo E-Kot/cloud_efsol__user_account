@@ -8880,8 +8880,8 @@ h6,
 }
 
 .menu {
-  margin-bottom: 24px;
-  margin-top: 24px;
+  margin-bottom: 16px;
+  margin-top: 16px;
   padding-left: 0;
 }
 
@@ -8895,29 +8895,29 @@ h6,
   width: calc(100% - 32px);
   margin-left: 1em;
   border-bottom: 1px solid #FFFFFF;
-  padding-top: 24px;
+  padding-top: 16px;
   opacity: 0.25;
 }
 
-.menu.menu_vertical:first-of-type {
+.menu:first-of-type {
   margin-top: 0;
 }
 
-.menu.menu_vertical:last-of-type {
+.menu:last-of-type {
   margin-bottom: 0;
 }
 
-.menu.menu_vertical:last-of-type:after {
+.menu:last-of-type:after {
   border-bottom: none;
   padding-top: 0;
 }
 
-.menu .menu__item {
+.menu__item {
   margin: 0;
   list-style: none;
 }
 
-.menu .menu__item a {
+.menu__item a {
   padding: 0.5em 1em;
   display: block;
   background-color: #575965;
@@ -8926,21 +8926,45 @@ h6,
   transition: all .3s linear;
 }
 
-.menu .menu__item a:hover {
+.menu__item a:hover {
   text-decoration: none;
   background-color: #494b55;
 }
 
-.menu .menu__item a picture {
+.menu__item a.icon-flexbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu__item a.icon-flexbox picture {
   margin-right: 1.5em;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
   vertical-align: middle;
 }
 
-.menu .menu__item a span {
+.menu__item a.icon-flexbox picture span {
+  width: auto;
   vertical-align: middle;
 }
 
-.menu .menu__item:last-of-type {
+.menu__item a:last-of-type {
   margin-bottom: 0;
 }
 
@@ -9659,11 +9683,7 @@ h6,
     margin-left: 0;
   }
 
-  .menu .menu__item a {
-    padding: 16px 24px;
-  }
-
-  .menu .menu__item.uk-active a {
+  .menu__item a.uk-active a {
     background-color: #FFFFFF;
     color: #575965;
   }
@@ -10071,6 +10091,11 @@ h6,
     grid-template-columns: 22% 78%;
   }
 
+  .menu__item a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
   .footer .footer__column {
     text-align: center;
     max-width: -webkit-max-content;
@@ -10090,6 +10115,19 @@ h6,
 @media (min-width: 1400px) {
   .site-grid {
     grid-template-columns: 20% 80%;
+  }
+
+  .menu {
+    margin-bottom: 24px;
+    margin-top: 24px;
+  }
+
+  .menu.menu_vertical:after {
+    padding-top: 24px;
+  }
+
+  .menu__item a {
+    padding: 16px 24px;
   }
 }
 
@@ -10310,11 +10348,11 @@ h6,
     grid-template-columns: 18% 82%;
   }
 
-  .menu .menu__item a {
+  .menu__item a {
     padding: 20px 24px;
   }
 
-  .menu .menu__item a picture {
+  .menu__item a.icon-flexbox picture {
     margin-right: 2em;
   }
 }

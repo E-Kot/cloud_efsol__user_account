@@ -6,9 +6,14 @@
   height: 2em;
 }
 .menu {
-  margin-bottom: $global-margin;
-  margin-top: $global-margin;
+  margin-bottom: $global-small-margin;
+  margin-top: $global-small-margin;
   padding-left: 0;
+
+  @media (min-width:1400px) {
+    margin-bottom: $global-margin;
+    margin-top: $global-margin;
+  }
   &.menu_vertical {
     font-weight: 600;
     &:after {
@@ -17,8 +22,13 @@
       width: calc(100% - 32px);
       margin-left: 1em;
       border-bottom: 1px solid $bg_white;
-      padding-top: $global-margin;
+      padding-top: $global-small-margin;
       opacity: 0.25;
+
+      @media (min-width:1400px) {
+        padding-top: $global-margin;
+      }
+    }
     }
     &:first-of-type {
       margin-top: 0;
@@ -44,21 +54,36 @@
         text-decoration: none;
         background-color: darken($global-primary-background, 6);
       }
-      @media (min-width: 960px) {
+      @media (min-width: 1200px) {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+      @media (min-width: 1400px) {
         padding: $global-small-margin $global-gutter;
       }
       @media (min-width: 1920px) {
         padding: 20px $global-gutter;
       }
-      picture {
-        margin-right: 1.5em;
-        vertical-align: middle;
-        @media (min-width: 1920px) {
-          margin-right: 2em;
+      &.icon-flexbox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;
+        picture {
+          margin-right: 1.5em;
+          width: 32px;
+          min-width: 32px;
+          height: 32px;
+          vertical-align: middle;
+          @media (min-width: 1920px) {
+            margin-right: 2em;
+          }
+        span {
+          width: auto;
+          vertical-align: middle;
         }
-      }
-      span {
-        vertical-align: middle;
       }
     }
     &.uk-active {
