@@ -17,6 +17,7 @@ $efsol-theme-link-hover:                                #656c92;
 
 $bg_yellow:                                              #FFD200;
 $bg_white:                                               #FFFFFF;
+$bg_active: #E1E1F0;
 
 /* --------- mixins --------- */
 @mixin btn($font-weight: 500, $color: $global-color, $justify-content: center) {

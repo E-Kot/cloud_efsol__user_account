@@ -46,8 +46,8 @@
 }
 
 .left-column {
-  padding: 40px 0;
   @media (min-width: 960px) {
+    padding: 40px 0;
     grid-area: left-column;
     padding: 56px 0;
   }

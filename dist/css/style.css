@@ -8564,6 +8564,26 @@ h6,
   font-size: 1.125rem;
 }
 
+h1,
+.h1,
+h6,
+.h6 {
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
 ._bg_yellow {
   background-color: #FFD200;
 }
@@ -8595,10 +8615,6 @@ h6,
 .site-grid {
   width: 100%;
   position: relative;
-}
-
-.left-column {
-  padding: 40px 0;
 }
 
 .left-column .uk-offcanvas-bar {
@@ -8973,6 +8989,76 @@ h6,
   height: 32px;
 }
 
+.category-filter .category-filter__item {
+  margin-top: 1em;
+}
+
+.category-filter .category-filter__item:first-of-type {
+  margin-top: 0;
+}
+
+.icon-info-box .icon-info-box__icon {
+  margin-bottom: 1em;
+}
+
+.add-box {
+  font-weight: 600;
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+}
+
+.add-box:before {
+  content: "+";
+  font-size: 1.125em;
+  font-weight: 800;
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.add-box:last-of-type {
+  margin-bottom: 0;
+}
+
+.accordion-item .accordion-item__header {
+  font-size: 16px;
+  cursor: pointer;
+  padding: 16px;
+  background-color: #fff;
+  border: 2px solid #F3F3F9;
+}
+
+.accordion-item .accordion-item__header .h4 {
+  margin-bottom: 1rem;
+}
+
+.accordion-item .accordion-item__header p {
+  margin: 1rem 0;
+}
+
+.accordion-item .uk-accordion-content {
+  padding: 2.5em 16px;
+  margin-top: 0;
+  background-color: #fff;
+  -webkit-transition: background-color 0.8s linear;
+  -o-transition: background-color 0.8s linear;
+  transition: background-color 0.8s linear;
+}
+
+.accordion-item.uk-open .accordion-item__header {
+  border-color: #E1E1F0;
+  background-color: #E1E1F0;
+}
+
+.accordion-item.uk-open .accordion-item__header .icon_base-fill {
+  fill: #fff;
+}
+
+.accordion-item.uk-open .uk-accordion-content {
+  background-color: #F3F3F9;
+}
+
 .footer {
   width: 100%;
   padding: 1em 0;
@@ -9260,6 +9346,55 @@ h6,
   .logo .logo__img {
     margin-left: 3.3em;
     height: 3.5em;
+  }
+
+  .icon-info-box .icon-info-box__icon {
+    min-width: 3em;
+  }
+
+  .icon-info-box .icon-info-box__icon source,
+  .icon-info-box .icon-info-box__icon img,
+  .icon-info-box .icon-info-box__icon svg {
+    width: 100%;
+  }
+
+  .icon-info-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+
+  .icon-info-box .icon-info-box__description {
+    text-align: left;
+    padding-left: 1.5em;
+  }
+
+  .add-box {
+    width: auto;
+    margin-left: 2em;
+  }
+
+  .add-box:first-of-type {
+    margin-left: 0;
+  }
+
+  .accordion-item .accordion-item__header .accordion-item__header_right-box {
+    text-align: left;
+    padding-left: 4.5em;
   }
 
   .footer {
@@ -9635,6 +9770,7 @@ h6,
   }
 
   .left-column {
+    padding: 40px 0;
     grid-area: left-column;
     padding: 56px 0;
   }
@@ -10341,6 +10477,43 @@ h6,
   .uk-hidden\@xl {
     display: none !important;
   }
+
+  .icon-info-box {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .accordion-item .accordion-item__header p {
+    margin-bottom: 0;
+  }
+
+  .accordion-item .accordion-item__header .accordion-item__header_right-box {
+    text-align: right;
+    padding-left: 0;
+    min-width: 18em;
+    width: 18em;
+  }
+
+  .accordion-item .accordion-item__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: stretch;
+        align-content: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (min-width: 1920px) {
@@ -10354,6 +10527,11 @@ h6,
 
   .menu__item a.icon-flexbox picture {
     margin-right: 2em;
+  }
+
+  .accordion-item .accordion-item__header .accordion-item__header_right-box {
+    min-width: 26em;
+    width: 26em;
   }
 }
 
