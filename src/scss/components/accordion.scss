@@ -16,6 +16,9 @@
         width: 100%;
       }
     }
+    @media(min-width: 1600px) {
+      margin-bottom: 0;
+    }
   }
   @media (min-width: 640px) {
     display: flex;
