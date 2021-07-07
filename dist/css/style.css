@@ -8584,6 +8584,14 @@ h5,
   margin-bottom: 1em;
 }
 
+article a {
+  text-decoration: underline;
+}
+
+article a:hover {
+  text-decoration: none;
+}
+
 ._bg_yellow {
   background-color: #FFD200;
 }
@@ -8682,9 +8690,9 @@ h5,
 }
 
 .button.button_large {
-  padding: 0.75em 3em;
+  padding: 0.75em 2em;
   font-weight: 600;
-  height: 3.5em;
+  font-size: 1.25rem;
 }
 
 .button.button_add:before {
@@ -8699,8 +8707,8 @@ h5,
 
 .animated-button {
   position: relative;
-  height: 2.5em;
   overflow: hidden;
+  display: inline-block;
 }
 
 .animated-button .animated-button__btn {
@@ -8810,6 +8818,14 @@ h5,
   background: #FFD200;
 }
 
+.animated-button.button_small {
+  height: 2.5em;
+}
+
+.animated-button.button_large {
+  height: 3.5em;
+}
+
 .button_login-info {
   font-weight: 400;
   color: #0F0F0F;
@@ -8829,6 +8845,39 @@ h5,
 
 .button_login-info .uk-text-truncate {
   max-width: calc(100% - 40px);
+}
+
+.form-wrap {
+  max-width: 78em;
+  margin: 0 auto;
+}
+
+.form label {
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.form .uk-input {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 16px 0px #747EB212;
+          box-shadow: 0px 5px 16px 0px #747EB212;
+}
+
+.form .uk-input:focus {
+  background-color: #FFFFFF;
+}
+
+.form .uk-textarea {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 5px 16px 0px #747EB212;
+          box-shadow: 0px 5px 16px 0px #747EB212;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.form .uk-textarea:focus {
+  background-color: #FFFFFF;
 }
 
 .dropdown-block {
@@ -9070,6 +9119,10 @@ h5,
 .accordion-item .uk-accordion-content .uk-accordion-content__subtitle {
   font-weight: 500;
   font-size: 1.25rem;
+}
+
+.accordion-item .uk-accordion-content .form {
+  padding-top: 2em;
 }
 
 .accordion-item.uk-open .accordion-item__header {
@@ -9340,6 +9393,10 @@ h5,
 
   .uk-hidden\@s {
     display: none !important;
+  }
+
+  .form label {
+    text-align: left;
   }
 
   .site-header .site-header__grid .animated-button {
@@ -10256,6 +10313,31 @@ h5,
 
   .site-grid {
     grid-template-columns: 22% 78%;
+  }
+
+  .button.button_large {
+    font-size: 1.5rem;
+    padding: 0.75em 3em;
+  }
+
+  .animated-button.button_large .animated-button__btn:before {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .animated-button.button_large .animated-button__btn:after {
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .form .uk-input {
+    padding: 1em;
+  }
+
+  .form .uk-textarea {
+    padding: 1em;
   }
 
   .menu__item a {

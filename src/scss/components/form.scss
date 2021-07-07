@@ -1,0 +1,40 @@
+.form-wrap {
+  max-width: 78em;
+  margin: 0 auto;
+}
+.form {
+  label {
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    display: block;
+    @media (min-width: 640px) {
+      text-align: left;
+    }
+  }
+  .uk-input{
+    background-color: $bg_white;
+    box-shadow: $global-medium-box-shadow;
+    &:focus {
+      background-color: $bg_white;
+    }
+    @media (min-width: 1200px) {
+      padding: 1em;
+    }
+  }
+  .uk-textarea {
+    background-color: $bg_white;
+    box-shadow: $global-medium-box-shadow;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    &:focus {
+      background-color: $bg_white;
+    }
+    @media (min-width: 1200px) {
+      padding: 1em;
+    }
+  }
+  .uk-select:focus {
+
+  }
+
+}

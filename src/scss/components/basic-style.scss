@@ -47,6 +47,12 @@ h5,.h5 {
   font-weight: 700;
   margin-bottom: 1em;
 }
+article a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
 ._bg_yellow {
   background-color: $bg_yellow;
 }

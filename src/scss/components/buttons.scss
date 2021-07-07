@@ -14,9 +14,13 @@
     padding: 0.75em 1.75em;
   }
   &.button_large {
-    padding: 0.75em 3em;
+    padding: 0.75em 2em;
     font-weight: 600;
-    height: 3.5em;
+    font-size: 1.25rem;
+    @media (min-width: 1200px) {
+      font-size: 1.5rem;
+      padding: 0.75em 3em;
+    }
   }
   &.button_add:before {
     content: "";
@@ -31,8 +35,8 @@
 
 .animated-button {
   position: relative;
-  height: 2.5em;
   overflow: hidden;
+  display: inline-block;
   .animated-button__btn {
     background: $bg_yellow;
     line-height: 1.05;
@@ -102,6 +106,22 @@
     }
     &:visited {
       background: $bg_yellow;
+    }
+  }
+  &.button_small {
+    height: 2.5em;
+  }
+  &.button_large {
+    height: 3.5em;
+    @media (min-width: 1200px) {
+      .animated-button__btn {
+        &:before {
+          transition: 0.5s;
+        }
+        &:after {
+          transition: 0.5s;
+        }
+      }
     }
   }
 }
