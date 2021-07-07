@@ -108,6 +108,13 @@
     margin-top: 0;
     background-color: #fff;
     transition: background-color 0.8s linear;
+    .uk-accordion-content__title {
+      font-size: $efsol-theme-h2-font-size;
+    }
+    .uk-accordion-content__subtitle {
+      font-weight: 500;
+      font-size: $efsol-theme-h5-font-size;
+    }
   }
   &.uk-open {
     .accordion-item__header {

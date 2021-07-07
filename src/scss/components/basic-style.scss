@@ -50,3 +50,26 @@ h5,.h5 {
 ._bg_yellow {
   background-color: $bg_yellow;
 }
+._title-line {
+  position: relative;
+  padding-bottom: 28px;
+  &::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background-color: $bg_yellow;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 60px;
+    margin-left: -30px;
+    @media (min-width: 1200px) {
+      width: 80px;
+      margin-left: -40px;
+    }
+    @media (min-width: 1600px) {
+      width: 100px;
+      margin-left: -50px;
+    }
+  }
+}

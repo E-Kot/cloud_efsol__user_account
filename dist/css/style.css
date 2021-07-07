@@ -8588,6 +8588,23 @@ h5,
   background-color: #FFD200;
 }
 
+._title-line {
+  position: relative;
+  padding-bottom: 28px;
+}
+
+._title-line::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background-color: #FFD200;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 60px;
+  margin-left: -30px;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9044,6 +9061,15 @@ h5,
   -webkit-transition: background-color 0.8s linear;
   -o-transition: background-color 0.8s linear;
   transition: background-color 0.8s linear;
+}
+
+.accordion-item .uk-accordion-content .uk-accordion-content__title {
+  font-size: 2rem;
+}
+
+.accordion-item .uk-accordion-content .uk-accordion-content__subtitle {
+  font-weight: 500;
+  font-size: 1.25rem;
 }
 
 .accordion-item.uk-open .accordion-item__header {
@@ -10223,6 +10249,11 @@ h5,
     display: none !important;
   }
 
+  ._title-line::after {
+    width: 80px;
+    margin-left: -40px;
+  }
+
   .site-grid {
     grid-template-columns: 22% 78%;
   }
@@ -10476,6 +10507,11 @@ h5,
 
   .uk-hidden\@xl {
     display: none !important;
+  }
+
+  ._title-line::after {
+    width: 100px;
+    margin-left: -50px;
   }
 
   .icon-info-box .icon-info-box__icon {
