@@ -86,15 +86,6 @@
         }
       }
     }
-    &.uk-active {
-      a {
-        @media (min-width: 960px) {
-          background-color: $bg_white;
-          color: $global-muted-color;
-        }
-      }
-    }
-
     @media (min-width:1200px) {
 
     }
@@ -103,6 +94,14 @@
     }
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+  &.uk-active {
+    a {
+      @media (min-width: 960px) {
+        background-color: $bg_white;
+        color: $global-muted-color;
+      }
     }
   }
 
