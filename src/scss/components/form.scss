@@ -11,30 +11,66 @@
       text-align: left;
     }
   }
-  .uk-input{
-    background-color: $bg_white;
+
+  .uk-input {
+    background: $bg_white !important;
     box-shadow: $global-medium-box-shadow;
+
     &:focus {
-      background-color: $bg_white;
+      background: $bg_white  !important;
     }
+
     @media (min-width: 1200px) {
       padding: 1em;
     }
   }
+
   .uk-textarea {
-    background-color: $bg_white;
+    background: $bg_white;
     box-shadow: $global-medium-box-shadow;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+
     &:focus {
       background-color: $bg_white;
     }
+
     @media (min-width: 1200px) {
       padding: 1em;
     }
   }
+
   .uk-select:focus {
 
   }
 
+  .uk-input:invalid {
+    //box-shadow: 0 0 2px 1px $global-danger-background;
+  }
+  .uk-input:focus:invalid {
+    outline: none;
+  }
+  .uk-input:valid {
+    box-shadow: none;
+    background: $bg_white;
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
+    -webkit-text-fill-color: $global-color !important; /* цвет текста */
+    color: $global-color !important; /* цвет текста */
+  }
+
+  ::-webkit-input-placeholder {
+    opacity: 0.6;
+  }
+  ::-moz-placeholder {
+    opacity: 0.6;
+  }
+  :-moz-placeholder {
+    opacity: 0.6;
+  }
+  :-ms-input-placeholder {
+    opacity: 10.6;
+  }
 }
+
