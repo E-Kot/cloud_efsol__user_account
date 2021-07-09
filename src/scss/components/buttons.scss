@@ -150,7 +150,7 @@
   position: relative;
   border: 2px solid $bg_yellow;
   background-color: transparent;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  transition: all 0.5s;
   outline: none;
   &::after {
     content: "";

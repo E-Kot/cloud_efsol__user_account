@@ -8860,11 +8860,9 @@ article a:hover {
   position: relative;
   border: 2px solid #FFD200;
   background-color: transparent;
-  -webkit-transition: color 0.5s, background-color 0.2s, -webkit-transform 0.2s;
-  transition: color 0.5s, background-color 0.2s, -webkit-transform 0.2s;
-  -o-transition: color 0.5s, transform 0.2s, background-color 0.2s;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s;
-  transition: color 0.5s, transform 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
   outline: none;
 }
 
