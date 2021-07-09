@@ -8671,6 +8671,10 @@ article a:hover {
   font-family: "Montserrat", sans-serif;
   border-radius: 0;
   font-size: inherit;
+  display: inline-block;
+}
+
+.button.button_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8847,6 +8851,48 @@ article a:hover {
 
 .button_login-info .uk-text-truncate {
   max-width: calc(100% - 40px);
+}
+
+.button_border-yellow {
+  overflow: hidden;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  border: 2px solid #FFD200;
+  background-color: transparent;
+  -webkit-transition: color 0.5s, background-color 0.2s, -webkit-transform 0.2s;
+  transition: color 0.5s, background-color 0.2s, -webkit-transform 0.2s;
+  -o-transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s;
+  transition: color 0.5s, transform 0.2s, background-color 0.2s, -webkit-transform 0.2s;
+  outline: none;
+}
+
+.button_border-yellow::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffd200;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button_border-yellow:hover::after,
+.button_border-yellow:active::after {
+  opacity: 1;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
 }
 
 .form-wrap {
@@ -9173,6 +9219,11 @@ article a:hover {
 
 .accordion-item.uk-open .uk-accordion-content {
   background-color: #F3F3F9;
+}
+
+.uk-modal-body {
+  padding-top: 2.5em;
+  padding-bottom: 2.5em;
 }
 
 .footer {
@@ -9515,6 +9566,11 @@ article a:hover {
   .accordion-item .accordion-item__header .accordion-item__header_right-box {
     text-align: left;
     padding-left: 4.5em;
+  }
+
+  .uk-modal-body {
+    padding-top: 3em;
+    padding-bottom: 3em;
   }
 
   .footer {
