@@ -59,6 +59,11 @@ article a {
 ._bg_white {
   background-color: $bg_white;
 }
+.uk-link-toggle:focus .uk-link,
+.uk-link-toggle:hover .uk-link,
+.uk-link:hover, a:hover {
+  color: $efsol-theme-link-hover;
+}
 ._title-line {
   position: relative;
   padding-bottom: 28px;
@@ -79,6 +84,29 @@ article a {
     @media (min-width: 1600px) {
       width: 100px;
       margin-left: -50px;
+    }
+  }
+}
+
+.icon-flexbox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+  picture {
+    margin-right: 1.5em;
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    @media (min-width: 1920px) {
+      margin-right: 2em;
+    }
+    span {
+      width: auto;
+      vertical-align: middle;
     }
   }
 }
