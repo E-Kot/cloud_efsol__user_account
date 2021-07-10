@@ -9224,6 +9224,14 @@ article a:hover {
   padding-bottom: 2.5em;
 }
 
+.modal-service-form_wrap {
+  display: block;
+}
+
+.modal-service-form_callback {
+  display: none;
+}
+
 .footer {
   width: 100%;
   padding: 1em 0;

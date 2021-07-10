@@ -12487,7 +12487,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // form in accordion item (add modal callback)
 
 (function () {
-
     let el1 = document.querySelectorAll('.accordion-item');
 
     for (let i = 0; i < el1.length; i++) {
@@ -12498,6 +12497,12 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             function callback() {
                 UIkit.modal('#modal__callback-service-form').show();
+                document.querySelector('.button.uk-modal-close').onclick = function () {
+                    ele.submit();
+                }
+                document.querySelector('.modal-close').onclick = function () {
+                    ele.submit();
+                }
             }
 
         }
@@ -12505,6 +12510,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 })();
+
+// form in modal (add callback)
+
+(function () {
+    let modalFormSubmit = document.querySelectorAll('.call_modal-form');
+
+    for (let i = 0; i < modalFormSubmit.length; i++) {
+        modalFormSubmit[i].onclick = function() {
+            let modalFormOpen = document.querySelector('#modal__service-form .service-form');
+            if (modalFormOpen) {
+                modalFormOpen.addEventListener("submit", modalCallback, false);
+            }
+
+            function modalCallback() {
+                document.querySelector('.modal-service-form_wrap').style.display = 'none';              // Hide
+                document.querySelector('.modal-service-form_callback').style.display = 'block';          // Show
+
+                document.querySelector('#modal__service-form .button.uk-modal-close').onclick = function () {
+                    modalFormOpen.submit();
+                }
+                document.querySelector('#modal__service-form .modal-close').onclick = function () {
+                    modalFormOpen.submit();
+                }
+            }
+        }
+    }
+
+})();
+
+
+
 
 
 
