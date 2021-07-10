@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+@@include('_header.html')
+
+
+<div class="site-grid" uk-filter="target: .js-filter">
+
+    <div class="left-column uk-background-primary uk-light">
+        <div id="offcanvas-usage" uk-offcanvas="overlay: true">
+            <div class="uk-offcanvas-bar">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                <div class="mobile-nav" uk-toggle="target: #offcanvas-usage">@@include('_menu.html')</div>
+            </div>
+        </div>
+
+        <div class="uk-visible@m">@@include('_menu.html')</div>
+    </div>
+
+    <div class="site-content">
+        <article class="article">
+            @@include('_settings-content.html')
+
+        </article>
+    </div>
+
+
+
+    @@include('_footer.html')

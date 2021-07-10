@@ -11,9 +11,17 @@
     flex-wrap: nowrap;
     align-content: stretch;
     align-items: center;
+    &.icon-w-26 img {
+      width: 27px;
+      height: 27px;
+      margin-right: 1em;
+    }
   }
   &.button_small {
     padding: 0.75em 1.75em;
+    &.icon-w-26 {
+      padding: 0.25em 1.75em 0.25em 1.5em;
+    }
   }
   &.button_large {
     padding: 0.75em 2em;

@@ -1,5 +1,53 @@
-
-
+.horizontal-blocks {
+  padding: 0;
+  list-style: none;
+}
+.horizontal-blocks__item {
+  font-size: $global-font-size;
+  cursor: pointer;
+  padding: $global-small-gutter;
+  background-color: #fff;
+  border:$global-border-width solid $global-muted-background;
+  .h4 {
+    margin-bottom: 1rem;
+  }
+  p {
+    margin: 1rem 0;
+    @media (min-width: 1600px) {
+      margin-bottom: 0;
+    }
+  }
+  .horizontal-blocks__item_right-box {
+    .button {
+      margin: 0 auto;
+      @media (min-width:640px) {
+        margin: 0;
+      }
+    }
+    @media (min-width: 640px) {
+      text-align: left;
+      padding-left: 4.5em;
+    }
+    @media (min-width: 1600px) {
+      text-align: right;
+      padding-left: 0;
+      //min-width: 18em;
+      //width: 18em;
+    }
+    @media (min-width: 1920px) {
+      //min-width: 26em;
+      //width: 26em;
+    }
+  }
+  @media (min-width: 1600px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+  }
+}
 
 
 

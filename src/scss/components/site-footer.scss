@@ -2,6 +2,7 @@
   width: 100%;
   padding: 1em 0;
   text-align: center;
+  grid-area: footer;
   @media (min-width: 640px) {
     & {
       text-align: right;
@@ -11,9 +12,6 @@
     }
   }
   @media (min-width: 960px) {
-    & {
-      grid-area: footer;
-    }
     .footer__column {
       text-align: left;
     }
