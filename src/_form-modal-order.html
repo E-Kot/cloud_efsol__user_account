@@ -1,0 +1,47 @@
+<!-- This is the modal order form -->
+<div id="modal__service-form" uk-modal>
+  <div class="uk-modal-dialog uk-text-center uk-modal-body _bg_white">
+    <button class="uk-modal-close-default modal-close" type="button" uk-close></button>
+    <div class="modal-service-form_wrap">
+      <h4>Опишите Вашу задачу</h4>
+      <form class="form service-form" uk-grid onsubmit="return false;">
+        <div class="uk-width-1-2@s">
+          <label class="uk-form-label">Имя</label>
+          <input name="name" class="uk-input" type="text" placeholder="Укажите Ваше имя" required>
+        </div>
+        <div class="uk-width-1-2@s">
+          <label class="uk-form-label">Телефон</label>
+          <input name="tel" pattern="\+?[0-9\s\-\(\)]+" data-phonemask="+7 (___)___-____"
+                 placeholder="+7(xxx)xxx-xxxx" class="uk-input masked-phone" type="tel" required>
+        </div>
+        <div class="uk-width-1-1">
+          <label class="uk-form-label">e-mail</label>
+          <input name="email" class="uk-input" type="email" placeholder="Введите e-mail" required>
+        </div>
+
+        <div class="uk-width-1-1">
+          <label class="uk-form-label">Комментарий</label>
+          <textarea name="message" class="uk-textarea" rows="5"
+                    placeholder="Опишите Вашу задачу"></textarea>
+        </div>
+        <div class="uk-width-1-1">
+          Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a>
+          и
+          подтверждаю факт ознакомления с
+          <a href="#" target="_blank">Политикой конфиденциальности</a>.
+        </div>
+        <div class="uk-width-1-1">
+          <div class="animated-button animated-button_yellow">
+            <button type="submit" class="button animated-button__btn button_large">Отправить
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-service-form_callback">
+      <h4>Спасибо за обращение!</h4>
+      <p>Наш специалист с Вами свяжется в ближайшее время.</p>
+      <button class="button button_border-yellow button_small uk-modal-close" type="button">Хорошо</button>
+    </div>
+  </div>
+</div>

@@ -110,3 +110,38 @@ article a {
     }
   }
 }
+
+.logo {
+  display: inline-block;
+  .logo__img {
+    height: 4em;
+    width: auto;
+    @media (min-width: 640px) {
+      margin-left: 3.3em;
+      height: 3.5em;
+    }
+    @media (min-width: 768px) {
+      height: 3em;
+    }
+    @media (min-width: 960px) {
+      margin-left: 0;
+    }
+  }
+  &._big-logo {
+    .logo__img {
+      height: 70px;
+      @media (min-width: 640px) {
+        height: 76px;
+      }
+      @media (min-width: 960px)  {
+        height: 90px;
+      }
+      @media (min-width: 1366px)  {
+        height: 106px;
+      }
+      @media (min-width: 1600px)  {
+        height: 120px;
+      }
+    }
+  }
+}

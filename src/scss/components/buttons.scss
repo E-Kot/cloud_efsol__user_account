@@ -75,7 +75,7 @@
       top: 0;
       opacity: .5;
       filter: blur(30px);
-      transform: translateX(-100px)  skewX(-15deg);
+      transform: translateX(-200px)  skewX(-15deg);
     }
     &:after{
       content: '';
@@ -88,17 +88,17 @@
       top: 0;
       opacity: 0;
       filter: blur(5px);
-      transform: translateX(-100px) skewX(-15deg);
+      transform: translateX(-200px) skewX(-15deg);
     }
     &:hover{
       cursor: pointer;
       &:before{
-        transform: translateX(400px)  skewX(-15deg);
+        transform: translateX(600px)  skewX(-15deg);
         opacity: 0.6;
         transition: 1s;
       }
       &:after{
-        transform: translateX(400px) skewX(-15deg);
+        transform: translateX(600px) skewX(-15deg);
         opacity: 1;
         transition: 1s;
       }
