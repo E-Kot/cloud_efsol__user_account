@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* Connecting fonts Start
 Do not delete!
 */
@@ -8598,6 +8596,10 @@ article a:hover {
   background-color: #FFD200;
 }
 
+._bg_white {
+  background-color: #FFFFFF;
+}
+
 ._title-line {
   position: relative;
   padding-bottom: 28px;
@@ -8936,13 +8938,10 @@ article a:hover {
   background: #FFFFFF;
 }
 
-.form input:-webkit-autofill {
+.form .uk-input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
-  /* Цвет фона */
   -webkit-text-fill-color: #0F0F0F !important;
-  /* цвет текста */
   color: #0F0F0F !important;
-  /* цвет текста */
 }
 
 .form ::-webkit-input-placeholder {
@@ -8959,6 +8958,17 @@ article a:hover {
 
 .form :-ms-input-placeholder {
   opacity: 10.6;
+}
+
+._bg_white .form .uk-input,
+._bg_white .form .uk-textarea {
+  background: #F3F3F9 !important;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+._bg_white .form .uk-input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #F3F3F9 !important;
 }
 
 .dropdown-block {

@@ -54,10 +54,10 @@
     box-shadow: none;
     background: $bg_white;
   }
-  input:-webkit-autofill {
-    -webkit-box-shadow: inset 0 0 0 50px #fff !important; /* Цвет фона */
-    -webkit-text-fill-color: $global-color !important; /* цвет текста */
-    color: $global-color !important; /* цвет текста */
+  .uk-input:-webkit-autofill {
+    -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+    -webkit-text-fill-color: $global-color !important;
+    color: $global-color !important;
   }
 
   ::-webkit-input-placeholder {
@@ -73,4 +73,14 @@
     opacity: 10.6;
   }
 }
-
+._bg_white {
+  .form  {
+    .uk-input, .uk-textarea {
+      background: $global-muted-background !important;
+      box-shadow: none;
+    }
+    .uk-input:-webkit-autofill {
+      -webkit-box-shadow: inset 0 0 0 50px $global-muted-background !important;
+    }
+  }
+}
