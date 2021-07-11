@@ -41,11 +41,8 @@
                     ele.submit();
                 }
             }
-
         }
-
     }
-
 })();
 
 // form in modal (add callback)
@@ -74,6 +71,37 @@
         }
     }
 
+})();
+
+
+
+// form in Settings (add modal callback)
+
+(function () {
+
+    let settingsEl = document.querySelectorAll('.horizontal-blocks__item');
+
+    for (let i = 0; i < settingsEl.length; i++) {
+        settingsEl[i].querySelector('.button').onclick = function() {
+
+            let FormEl = settingsEl[i].querySelector('.settings-form');
+
+            if(FormEl) {
+                FormEl.addEventListener("submit", callback1, false);  //Modern browsers
+            }
+            function callback1() {
+
+                UIkit.modal('#modal__callback-settings').show();
+                document.querySelector('#modal__callback-settings .button.uk-modal-close').onclick = function () {
+                    FormEl.submit();
+                }
+                document.querySelector('#modal__callback-settings .modal-close').onclick = function () {
+                    FormEl.submit();
+                }
+            }
+        }
+
+    }
 })();
 
 

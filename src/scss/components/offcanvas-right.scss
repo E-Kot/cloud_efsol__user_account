@@ -13,6 +13,14 @@
     color: $global-color;
   }
   .offcanvas-right__content {
+    a {
+      color: $global-color;
+      &:hover,
+      &:active {
+        color: $efsol-theme-link-hover;
+      }
+
+    }
     .animated-button,
     .button {
       width: 100%;

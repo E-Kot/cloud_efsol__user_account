@@ -2,9 +2,9 @@
 <h1>Настройки</h1>
 
 <section class="section">
-  <ul class="horizontal-blocks uk-text-center">
+  <div class="horizontal-blocks uk-text-center">
 
-    <!-- Item -->
+    <!-- Item Contacts -->
     <div class="horizontal-blocks__item">
       <div class="icon-info-box">
         <div class="icon-info-box__icon">
@@ -14,21 +14,272 @@
           <h2 class="h4">
             Контакты владельца аккаунта
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam at eligendi, exercitationem.
-          </p>
+          <p>Иванов Иван Иванович</p>
         </div>
       </div>
       <div class="horizontal-blocks__item_right-box">
-        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: .offcanvas-password">
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: #offcanvas-contacts">
           <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
         </button>
       </div>
+
+      <!-- offcanvas Block Contacts -->
+      <div id="offcanvas-contacts" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar offcanvas-right _bg_white">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3 class="offcanvas-right__title">Контакты владельца аккаунта</h3>
+
+          <div class="offcanvas-right__content">
+
+            <form class="form settings-form" uk-grid onsubmit="return false;">
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Фамилия</label>
+                <input name="surname" class="uk-input" type="text" placeholder="Иванов" required>
+              </div>
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Имя</label>
+                <input name="name" class="uk-input" type="text" placeholder="Иван" required>
+              </div>
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Отчество</label>
+                <input name="patronymic" class="uk-input" type="text" placeholder="Иванович" required>
+              </div>
+
+              <div class="uk-width-1-1">
+                <div class="animated-button animated-button_yellow">
+                  <button type="submit" class="button animated-button__btn button_large">Применить</button>
+                </div>
+              </div>
+            </form>
+
+            <p>* Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a> и подтверждаю факт ознакомления с <a href="#" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
     </div>
 
+    <!-- Item Email -->
+    <div class="horizontal-blocks__item">
+      <div class="icon-info-box">
+        <div class="icon-info-box__icon">
+          <img src="img/img_svg/email.svg" uk-svg alt="Электронная почта" class="uk-preserve">
+        </div>
+        <div class="icon-info-box__description">
+          <h2 class="h4">
+            Электронная почта
+          </h2>
+          <p>custom-user@gmail.com</p>
+        </div>
+      </div>
+      <div class="horizontal-blocks__item_right-box">
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: #offcanvas-email">
+          <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
+        </button>
+      </div>
 
-  </ul>
+      <!-- offcanvas Block Email -->
+      <div id="offcanvas-email" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar offcanvas-right _bg_white">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3 class="offcanvas-right__title">Электронная почта</h3>
+
+          <div class="offcanvas-right__content">
+
+            <form class="form settings-form" uk-grid onsubmit="return false;">
+              <div class="uk-width-1-1">
+                <input name="email" class="uk-input" type="email" placeholder="Ваш e-mail" required>
+              </div>
+
+              <div class="uk-width-1-1">
+                <div class="animated-button animated-button_yellow">
+                  <button type="submit" class="button animated-button__btn button_large">Применить</button>
+                </div>
+              </div>
+            </form>
+
+            <p>* Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a> и подтверждаю факт ознакомления с <a href="#" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Item Phone -->
+    <div class="horizontal-blocks__item">
+      <div class="icon-info-box">
+        <div class="icon-info-box__icon">
+          <img src="img/img_svg/smartphone.svg" uk-svg alt="Контакты владельца аккаунта" class="uk-preserve">
+        </div>
+        <div class="icon-info-box__description">
+          <h2 class="h4">
+            Мобильный телефон
+          </h2>
+          <p>+79999999999</p>
+        </div>
+      </div>
+      <div class="horizontal-blocks__item_right-box">
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: #offcanvas-phone">
+          <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
+        </button>
+      </div>
+
+      <!-- offcanvas Block Phone -->
+      <div id="offcanvas-phone" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar offcanvas-right _bg_white">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3 class="offcanvas-right__title">Мобильный телефон</h3>
+
+          <div class="offcanvas-right__content">
+
+            <form class="form settings-form" uk-grid onsubmit="return false;">
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Телефон</label>
+                <input name="tel" pattern="\+?[0-9\s\-\(\)]+" data-phonemask="+7 (___)___-____" placeholder="+7(xxx)xxx-xxxx" class="uk-input masked-phone" type="tel" required>
+              </div>
+
+              <div class="uk-width-1-1">
+                <div class="animated-button animated-button_yellow">
+                  <button type="submit" class="button animated-button__btn button_large">Применить</button>
+                </div>
+              </div>
+            </form>
+
+            <p>* Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a> и подтверждаю факт ознакомления с <a href="#" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Item Password -->
+    <div class="horizontal-blocks__item">
+      <div class="icon-info-box">
+        <div class="icon-info-box__icon">
+          <img src="img/img_svg/password.svg" uk-svg alt="Контакты владельца аккаунта" class="uk-preserve">
+        </div>
+        <div class="icon-info-box__description">
+          <h2 class="h4">
+            Пароль
+          </h2>
+        </div>
+      </div>
+      <div class="horizontal-blocks__item_right-box">
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: #offcanvas-password">
+          <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
+        </button>
+      </div>
+
+      <!-- offcanvas Block Password -->
+      <div id="offcanvas-password" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar offcanvas-right _bg_white">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3 class="offcanvas-right__title">Изменить пароль</h3>
+
+          <div class="offcanvas-right__content">
+
+            <form class="form settings-form" uk-grid onsubmit="return false;">
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Старый пароль</label>
+                <input name="old-password" class="uk-input" type="password" placeholder="***********" required>
+              </div>
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Новый пароль</label>
+                <input name="new-password" class="uk-input" type="password" placeholder="***********" required>
+              </div>
+              <p>* Пароль должен быть не менее 6 символов и средней или сильной надежности. Для повышения надежности используйте цифры и специальные символы.</p>
+              <div class="uk-width-1-1">
+                <label class="uk-form-label">Новый пароль еще раз</label>
+                <input name="double-password" class="uk-input" type="password" placeholder="***********" required>
+              </div>
+              <div class="uk-width-1-1">
+                <div class="animated-button animated-button_yellow">
+                  <button type="submit" class="button animated-button__btn button_large">Применить</button>
+                </div>
+              </div>
+            </form>
+
+            <p>* Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a> и подтверждаю факт ознакомления с <a href="#" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Item Company -->
+    <div class="horizontal-blocks__item">
+      <div class="icon-info-box">
+        <div class="icon-info-box__icon">
+          <img src="img/img_svg/company.svg" uk-svg alt="Название компании" class="uk-preserve">
+        </div>
+        <div class="icon-info-box__description">
+          <h2 class="h4">
+            Название компании
+          </h2>
+          <p>Название компании</p>
+        </div>
+      </div>
+      <div class="horizontal-blocks__item_right-box">
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: #offcanvas-company">
+          <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
+        </button>
+      </div>
+
+      <!-- offcanvas Block Company -->
+      <div id="offcanvas-company" uk-offcanvas="flip: true">
+        <div class="uk-offcanvas-bar offcanvas-right _bg_white">
+
+          <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+          <h3 class="offcanvas-right__title">Ваша компания</h3>
+
+          <div class="offcanvas-right__content">
+
+            <form class="form settings-form" uk-grid onsubmit="return false;">
+              <div class="uk-width-1-1">
+                <input name="company-name" class="uk-input" type="text" placeholder="Название компании" required>
+              </div>
+
+              <div class="uk-width-1-1">
+                <div class="animated-button animated-button_yellow">
+                  <button type="submit" class="button animated-button__btn button_large">Применить</button>
+                </div>
+              </div>
+            </form>
+
+            <p>* Отправляя форму я даю своё <a href="#" target="_blank">согласие на обработку персональных данных</a> и подтверждаю факт ознакомления с <a href="#" target="_blank">Политикой конфиденциальности</a>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
 
-
-@@include('_offcanvas-bar.html')
+<!-- This is the modal callback settings Form -->
+<div id="modal__callback-settings" uk-modal>
+  <div class="uk-modal-dialog uk-text-center uk-modal-body">
+    <button class="uk-modal-close-default modal-close" type="button" uk-close></button>
+    <h4>Ваши данные были успешно изменены</h4>
+    <button class="button button_border-yellow button_small uk-modal-close" type="submit">Хорошо</button>
+  </div>
+</div>

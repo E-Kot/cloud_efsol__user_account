@@ -8712,6 +8712,7 @@ a:hover {
 }
 
 .button {
+  cursor: pointer;
   font-weight: 500;
   color: #0F0F0F;
   -webkit-box-pack: center;
@@ -9359,23 +9360,31 @@ a:hover {
 }
 
 .horizontal-blocks__item {
+  margin-top: 1em;
   font-size: 16px;
-  cursor: pointer;
   padding: 16px;
   background-color: #fff;
   border: 2px solid #F3F3F9;
 }
 
-.horizontal-blocks__item .h4 {
+.horizontal-blocks__item .icon-info-box__description .h4 {
   margin-bottom: 1rem;
 }
 
-.horizontal-blocks__item p {
+.horizontal-blocks__item .icon-info-box__description p {
   margin: 1rem 0;
+}
+
+.horizontal-blocks__item .icon-info-box__description :last-child {
+  margin-bottom: 0;
 }
 
 .horizontal-blocks__item .horizontal-blocks__item_right-box .button {
   margin: 0 auto;
+}
+
+.horizontal-blocks__item:first-of-type {
+  margin-top: 0;
 }
 
 .offcanvas-right {
@@ -9396,6 +9405,15 @@ a:hover {
 
 .offcanvas-right .offcanvas-right__title {
   color: #0F0F0F;
+}
+
+.offcanvas-right .offcanvas-right__content a {
+  color: #0F0F0F;
+}
+
+.offcanvas-right .offcanvas-right__content a:hover,
+.offcanvas-right .offcanvas-right__content a:active {
+  color: #5d6174;
 }
 
 .offcanvas-right .offcanvas-right__content .animated-button,
@@ -10941,7 +10959,7 @@ a:hover {
             align-items: center;
   }
 
-  .horizontal-blocks__item p {
+  .horizontal-blocks__item .icon-info-box__description p {
     margin-bottom: 0;
   }
 

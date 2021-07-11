@@ -3,17 +3,22 @@
   list-style: none;
 }
 .horizontal-blocks__item {
+  margin-top: 1em;
   font-size: $global-font-size;
-  cursor: pointer;
   padding: $global-small-gutter;
   background-color: #fff;
   border:$global-border-width solid $global-muted-background;
-  .h4 {
-    margin-bottom: 1rem;
-  }
-  p {
-    margin: 1rem 0;
-    @media (min-width: 1600px) {
+  .icon-info-box__description {
+    .h4 {
+      margin-bottom: 1rem;
+    }
+    p {
+      margin: 1rem 0;
+      @media (min-width: 1600px) {
+        margin-bottom: 0;
+      }
+    }
+    & :last-child {
       margin-bottom: 0;
     }
   }
@@ -46,6 +51,9 @@
     justify-content: space-between;
     align-content: stretch;
     align-items: center;
+  }
+  &:first-of-type {
+    margin-top: 0;
   }
 }
 
