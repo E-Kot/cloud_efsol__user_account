@@ -78,9 +78,22 @@
     .uk-input, .uk-textarea {
       background: $global-muted-background !important;
       box-shadow: none;
+      color: $global-color;
     }
     .uk-input:-webkit-autofill {
       -webkit-box-shadow: inset 0 0 0 50px $global-muted-background !important;
+    }
+    ::-webkit-input-placeholder {
+      color: $global-color;
+    }
+    ::-moz-placeholder {
+      color: $global-color;
+    }
+    :-moz-placeholder {
+      color: $global-color;
+    }
+    :-ms-input-placeholder {
+      color: $global-color;
     }
   }
 }

@@ -1,0 +1,21 @@
+.offcanvas-right {
+  background: $bg_white;
+  color: $global-color;
+  box-shadow: 0px 5px 16px rgba(116, 126, 179, 0.12);
+  .uk-offcanvas-close {
+    color: $global-color;
+    &:hover,
+    &:active {
+      color: $efsol-theme-link-hover;
+    }
+  }
+  .offcanvas-right__title {
+    color: $global-color;
+  }
+  .offcanvas-right__content {
+    .animated-button,
+    .button {
+      width: 100%;
+    }
+  }
+}

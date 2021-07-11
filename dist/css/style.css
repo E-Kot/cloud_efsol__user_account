@@ -8598,6 +8598,7 @@ article a:hover {
 
 ._bg_white {
   background-color: #FFFFFF;
+  color: #0F0F0F;
 }
 
 .uk-link-toggle:focus .uk-link,
@@ -9022,10 +9023,27 @@ a:hover {
   background: #F3F3F9 !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+  color: #0F0F0F;
 }
 
 ._bg_white .form .uk-input:-webkit-autofill {
   -webkit-box-shadow: inset 0 0 0 50px #F3F3F9 !important;
+}
+
+._bg_white .form ::-webkit-input-placeholder {
+  color: #0F0F0F;
+}
+
+._bg_white .form ::-moz-placeholder {
+  color: #0F0F0F;
+}
+
+._bg_white .form :-moz-placeholder {
+  color: #0F0F0F;
+}
+
+._bg_white .form :-ms-input-placeholder {
+  color: #0F0F0F;
 }
 
 .page-form {
@@ -9358,6 +9376,31 @@ a:hover {
 
 .horizontal-blocks__item .horizontal-blocks__item_right-box .button {
   margin: 0 auto;
+}
+
+.offcanvas-right {
+  background: #FFFFFF;
+  color: #0F0F0F;
+  -webkit-box-shadow: 0px 5px 16px rgba(116, 126, 179, 0.12);
+          box-shadow: 0px 5px 16px rgba(116, 126, 179, 0.12);
+}
+
+.offcanvas-right .uk-offcanvas-close {
+  color: #0F0F0F;
+}
+
+.offcanvas-right .uk-offcanvas-close:hover,
+.offcanvas-right .uk-offcanvas-close:active {
+  color: #5d6174;
+}
+
+.offcanvas-right .offcanvas-right__title {
+  color: #0F0F0F;
+}
+
+.offcanvas-right .offcanvas-right__content .animated-button,
+.offcanvas-right .offcanvas-right__content .button {
+  width: 100%;
 }
 
 /* ========================================================================

@@ -166,6 +166,7 @@ $nav-header-font-size:                           $global-font-size;
 @import "components/modal";
 @import "components/site-footer";
 @import "components/horizontal-blocks";
+@import "components/offcanvas-right";
 
 //// Need to be loaded last
 @import "../../node_modules/uikit/src/scss/components/print.scss";

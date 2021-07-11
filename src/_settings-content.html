@@ -20,10 +20,15 @@
         </div>
       </div>
       <div class="horizontal-blocks__item_right-box">
-        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button"><img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить</button>
+        <button class="button button_border-yellow button_flex button_small icon-w-26" type="button" uk-toggle="target: .offcanvas-password">
+          <img src="img_sprite/icons/icons.svg#pen" alt="Изменить">Изменить
+        </button>
       </div>
     </div>
 
 
   </ul>
 </section>
+
+
+@@include('_offcanvas-bar.html')
