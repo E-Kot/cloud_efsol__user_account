@@ -60,6 +60,9 @@ article a {
   background-color: $bg_white;
   color: $global-color;
 }
+._muted-bg {
+  background-color: $global-muted-background;
+}
 .uk-grid-divider._divider-muted>:not(.uk-first-column)::before {
 border-color: #ededf7;
 }
@@ -204,5 +207,90 @@ border-color: #ededf7;
     strong {
       font-weight: 600;
     }
+  }
+}
+
+.badge-ribbon {
+  position: relative;
+  margin-right: -3rem;
+  div {
+    position: absolute;
+    right: 0;
+    bottom: 1rem;
+
+    span {
+      line-height: 40px;
+      position: relative;
+      margin-left: 2rem;
+      padding: 0 2rem;
+      background: $bg_yellow;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      font-weight: 700;
+      @media (min-width: 1366px) {
+        font-size: 1.25rem;
+        line-height: 48px;
+      }
+      @media (min-width: 1600px) {
+        font-size: 1.5rem;
+        line-height: 56px;
+      }
+    }
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-top: 40px solid $bg_yellow;
+      border-left: 2.5rem solid transparent;
+      @media (min-width: 1366px) {
+        border-top: 48px solid $bg_yellow;
+      }
+      @media (min-width: 1600px) {
+        border-top: 56px solid $bg_yellow;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-bottom: 40px solid $bg_yellow;
+      border-left: 2.5rem solid transparent;
+      @media (min-width: 1366px) {
+        border-bottom: 48px solid $bg_yellow;
+      }
+      @media (min-width: 1600px) {
+        border-bottom: 56px solid $bg_yellow;
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 1rem solid #F0AD00;
+    border-right: 1.5rem solid transparent;
+    @media (min-width: 1366px) {
+      border-right: 1.75rem solid transparent;
+    }
+  }
+  @media (min-width: 1200px) {
+    margin-right: -3.5rem;
+  }
+  @media (min-width: 1366px) {
+    margin-right: -3.75rem;
   }
 }
