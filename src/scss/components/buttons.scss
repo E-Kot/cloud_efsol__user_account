@@ -6,6 +6,7 @@
   border-radius: 0;
   font-size: inherit;
   display: inline-block;
+  text-decoration: none;
   &.button_flex {
     display: flex;
     flex-direction: row;
@@ -53,6 +54,7 @@
     line-height: 1.05;
     overflow: hidden;
     border: none;
+    display: block;
     .button_add {
       display: flex;
       flex-direction: row;
@@ -72,6 +74,7 @@
     }
     &:focus{
       outline: 0;
+      color: $global-color;
     }
     &:before{
       content: '';
@@ -101,6 +104,7 @@
     }
     &:hover{
       cursor: pointer;
+      color: $global-color;
       &:before{
         transform: translateX(600px)  skewX(-15deg);
         opacity: 0.6;
@@ -132,6 +136,24 @@
         &:after {
           transition: 0.5s;
         }
+      }
+    }
+  }
+  &.animated-button_primary-background {
+    .animated-button__btn {
+      background: $global-primary-background;
+      color: #fff;
+      &:before{
+        background: rgba(255, 255, 255, 0.4);
+      }
+      &:after{
+        background: rgba(182, 174, 255, 0.2);
+      }
+      &:active {
+        background: #363842;
+      }
+      &:visited {
+        background: $global-primary-background;
       }
     }
   }

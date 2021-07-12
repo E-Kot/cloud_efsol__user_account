@@ -8723,6 +8723,7 @@ a:hover {
   border-radius: 0;
   font-size: inherit;
   display: inline-block;
+  text-decoration: none;
 }
 
 .button.button_flex {
@@ -8783,6 +8784,7 @@ a:hover {
   line-height: 1.05;
   overflow: hidden;
   border: none;
+  display: block;
 }
 
 .animated-button .animated-button__btn .button_add {
@@ -8817,6 +8819,7 @@ a:hover {
 
 .animated-button .animated-button__btn:focus {
   outline: 0;
+  color: #0F0F0F;
 }
 
 .animated-button .animated-button__btn:before {
@@ -8855,6 +8858,7 @@ a:hover {
 
 .animated-button .animated-button__btn:hover {
   cursor: pointer;
+  color: #0F0F0F;
 }
 
 .animated-button .animated-button__btn:hover:before {
@@ -8891,6 +8895,27 @@ a:hover {
 
 .animated-button.button_large {
   height: 3.5em;
+}
+
+.animated-button.animated-button_primary-background .animated-button__btn {
+  background: #575965;
+  color: #fff;
+}
+
+.animated-button.animated-button_primary-background .animated-button__btn:before {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.animated-button.animated-button_primary-background .animated-button__btn:after {
+  background: rgba(182, 174, 255, 0.2);
+}
+
+.animated-button.animated-button_primary-background .animated-button__btn:active {
+  background: #363842;
+}
+
+.animated-button.animated-button_primary-background .animated-button__btn:visited {
+  background: #575965;
 }
 
 .button_login-info {
@@ -8987,6 +9012,31 @@ a:hover {
   background-color: #FFFFFF;
 }
 
+.form .checkbox-style {
+  font-weight: 400;
+}
+
+.form .checkbox-style input {
+  width: 40px;
+  height: 40px;
+  background: #FFFFFF;
+  margin-right: 1em;
+  -webkit-box-shadow: 0px 5px 16px 0px #747EB212;
+          box-shadow: 0px 5px 16px 0px #747EB212;
+}
+
+.form .checkbox-style input.uk-checkbox:indeterminate {
+  background: #FFFFFF;
+}
+
+.form .checkbox-style input.uk-checkbox:checked {
+  background-color: #FFFFFF;
+  background-image: url(../img_sprite/icons/icons.svg#check);
+  background-size: 25px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .form .uk-input:focus:invalid {
   outline: none;
 }
@@ -9020,7 +9070,8 @@ a:hover {
 }
 
 ._bg_white .form .uk-input,
-._bg_white .form .uk-textarea {
+._bg_white .form .uk-textarea,
+._bg_white .form .checkbox-style .uk-checkbox {
   background: #F3F3F9 !important;
   -webkit-box-shadow: none;
           box-shadow: none;

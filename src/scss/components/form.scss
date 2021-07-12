@@ -39,6 +39,28 @@
       padding: 1em;
     }
   }
+  .checkbox-style {
+    font-weight: 400;
+    input {
+      width: 40px;
+      height: 40px;
+      background: $bg_white;
+      margin-right: 1em;
+      box-shadow: $global-medium-box-shadow;
+      &.uk-checkbox:indeterminate {
+        background: $bg_white;
+      }
+      &.uk-checkbox:checked {
+        background-color: $bg_white;
+        background-image: url(../img_sprite/icons/icons.svg#check);
+        background-size: 25px auto;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+    }
+  }
+
 
   .uk-select:focus {
 
@@ -75,7 +97,7 @@
 }
 ._bg_white {
   .form  {
-    .uk-input, .uk-textarea {
+    .uk-input, .uk-textarea, .checkbox-style .uk-checkbox {
       background: $global-muted-background !important;
       box-shadow: none;
       color: $global-color;
@@ -150,5 +172,4 @@
     }
   }
 }
-
 
