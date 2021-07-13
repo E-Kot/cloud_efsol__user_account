@@ -181,6 +181,7 @@
   position: relative;
   border: 2px solid $bg_yellow;
   background-color: transparent;
+  z-index: 1;
   transition: all 0.5s;
   outline: none;
   &::after {
@@ -193,6 +194,40 @@
     width: 20px;
     height: 20px;
     background-color: #ffd200;
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  &:hover::after,
+  &:active::after {
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
+  }
+
+}
+.button_border-white {
+  overflow: hidden;
+  box-shadow: none;
+  position: relative;
+  z-index: 1;
+  border: 2px solid $bg_white;
+  background-color: transparent;
+  transition: all 0.5s;
+  outline: none;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 20px;
+    height: 20px;
+    background-color: $bg_white;
     border-radius: 50%;
     opacity: 0;
     z-index: -1;

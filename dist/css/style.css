@@ -9079,6 +9079,7 @@ a:hover {
   position: relative;
   border: 2px solid #FFD200;
   background-color: transparent;
+  z-index: 1;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
@@ -9105,6 +9106,47 @@ a:hover {
 
 .button_border-yellow:hover::after,
 .button_border-yellow:active::after {
+  opacity: 1;
+  width: 300px;
+  height: 300px;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+.button_border-white {
+  overflow: hidden;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  position: relative;
+  z-index: 1;
+  border: 2px solid #FFFFFF;
+  background-color: transparent;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  outline: none;
+}
+
+.button_border-white::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.button_border-white:hover::after,
+.button_border-white:active::after {
   opacity: 1;
   width: 300px;
   height: 300px;
@@ -9271,6 +9313,7 @@ a:hover {
 .start-form .start-form__description {
   margin: 2.5em 0;
   padding-bottom: 2.8em;
+  width: 100%;
 }
 
 .start-form .animated-button {
@@ -9288,6 +9331,21 @@ a:hover {
 .start-form .start-form__info-box p {
   margin-top: 0;
   margin-bottom: 0.75em;
+}
+
+.registration-success {
+  background-color: #E1E1F0;
+  padding: 1.75em 1em 2em;
+}
+
+.registration-success p {
+  margin: 8px 0;
+}
+
+.registration-success .uk-drop-close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
 }
 
 .dropdown-block {

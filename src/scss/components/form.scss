@@ -157,6 +157,7 @@
   .start-form__description {
     margin: 2.5em 0;
     padding-bottom: 2.8em;
+    width: 100%;
   }
   .animated-button {
     width: 100%;
@@ -173,3 +174,15 @@
   }
 }
 
+.registration-success {
+  background-color: $bg_grey;
+  padding: 1.75em 1em 2em;
+  p {
+    margin: 8px 0;
+  }
+  .uk-drop-close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+}
