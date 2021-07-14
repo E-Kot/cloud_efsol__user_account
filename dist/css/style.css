@@ -9390,6 +9390,10 @@ a:hover {
   color: #0F0F0F;
 }
 
+.dropdown-block .dropdown-block__content li p {
+  margin: 0.5em 0;
+}
+
 .dropdown-block .dropdown-block__content li a {
   color: #0F0F0F;
 }

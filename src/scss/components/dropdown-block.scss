@@ -20,6 +20,9 @@
         font-weight: 600;
         color: $global-link-color;
       }
+      p {
+        margin: 0.5em 0;
+      }
       a {
         color: $global-link-color;
         &:hover,
