@@ -195,16 +195,25 @@
             <form class="form settings-form" uk-grid onsubmit="return false;">
               <div class="uk-width-1-1">
                 <label class="uk-form-label">Старый пароль</label>
-                <input name="old-password" class="uk-input" type="password" placeholder="***********" required>
+                <div class="password-block">
+                  <input name="old-password" class="uk-input password-block__input" type="password" placeholder="***********" required>
+                  <div class="password-block__toggle"></div>
+                </div>
               </div>
               <div class="uk-width-1-1">
                 <label class="uk-form-label">Новый пароль</label>
-                <input name="new-password" class="uk-input" type="password" placeholder="***********" required>
+                <div class="password-block">
+                  <input name="new-password" class="uk-input password-block__input" type="password" placeholder="***********" required>
+                  <div class="password-block__toggle "></div>
+                </div>
               </div>
               <p>* Пароль должен быть не менее 6 символов и средней или сильной надежности. Для повышения надежности используйте цифры и специальные символы.</p>
               <div class="uk-width-1-1">
                 <label class="uk-form-label">Новый пароль еще раз</label>
-                <input name="double-password" class="uk-input" type="password" placeholder="***********" required>
+                <div class="password-block">
+                  <input name="double-password" class="uk-input password-block__input" type="password" placeholder="***********" required>
+                  <div class="password-block__toggle"></div>
+                </div>
               </div>
               <div class="uk-width-1-1">
                 <div class="animated-button animated-button_yellow">

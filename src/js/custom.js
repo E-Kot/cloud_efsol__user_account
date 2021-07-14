@@ -106,6 +106,21 @@
 
 
 
+// Show / hide password
+
+(function () {
+    let passwordBlock = document.querySelectorAll('.password-block');
+    for (let i = 0; i < passwordBlock.length; i++) {
+
+        let passwordToggle = passwordBlock[i].querySelector('.password-block__toggle');
+        passwordToggle.onclick = function() {
+            let input = passwordBlock[i].querySelector('.password-block__input');
+            input.type = (input.type==="password") ? "text" : "password";
+        }
+
+    }
+})();
+
 
 
 
