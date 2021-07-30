@@ -13,6 +13,9 @@
     right: 0;
     box-sizing: border-box;
     width: 100%;
+    .breadcrumb-wrap {
+      padding-left: 1em;
+    }
   }
   @media (min-width: 2560px) {
     max-width: 2560px;

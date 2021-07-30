@@ -10534,6 +10534,10 @@ a:hover {
     width: 100%;
   }
 
+  .site-header .breadcrumb-wrap {
+    padding-left: 1em;
+  }
+
   .site-header .site-header__grid {
     display: -webkit-box;
     display: -ms-flexbox;
