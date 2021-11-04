@@ -8711,6 +8711,7 @@ a:hover {
 }
 
 .informer-block {
+  max-width: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
